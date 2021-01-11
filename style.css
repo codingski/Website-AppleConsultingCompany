@@ -223,21 +223,19 @@ p {
     height: 70px;
 }
 
-
-
-
-
-
 /* Core business */
 #core {
     background: url('./data/background/gradation3.PNG') center/cover no-repeat;
     text-align: center;
-    padding: 0px 400px;
+    padding: 70px 400px;
 }
 
-.core__item {
-    margin-bottom: 20px;
+.core__item--left,
+.core__item--right {
+    display: flex;
+    flex-direction: column;
 }
+
 .core__item__title--left,
 .core__item__title--right {
     display: flex;
@@ -246,11 +244,11 @@ p {
 }
 
 .core__item__title--right {
-    width: 100%;
-    padding-left: 610px;
+    flex-direction: row-reverse;
 }
 
-.core__item i {
+.core__item--left i,
+.core__item--right i {
     font-size: 20px;
     line-height: 30px;
     width: 30px;
@@ -260,8 +258,14 @@ p {
     margin-top: 5px;
 }
 
+.core__description {
+    font-size: 30px;
+    padding: 0 5px;
+    margin: 0;
+}
+
 .core__item__description--left {
-    background-color: var(--color-blue);
+    background-color: rgba(128, 128, 128, 0.253);
     font-size: 20px;
     margin-left: 30px;
     padding: 6px;
@@ -271,19 +275,19 @@ p {
 }
 
 .core__item__description--right {
-    background-color: var(--color-blue);
+    background-color: gray;
     font-size: 20px;
     padding: 6px;
+    margin-right: 30px;
     border: 3px solid red;
     border-radius: 10px;
     text-align: left;
 }
 
-.core__description {
-    font-size: 30px;
-    padding: 0 5px;
-    margin: 0;
+.core__item__description--right p {
+    text-align: right;
 }
+
 
 /* Process */
 
@@ -301,12 +305,13 @@ p {
 
 .procedures i {
     font-size: 30px;
+    color: red;
 }
 
 .procedure {
     display: flex;
     flex-direction: column;
-    border: 3px solid black;
+    border: 3px solid rgba(133, 13, 13, 0.938);
     border-radius: 10px;
     width: 500px;
 }
