@@ -193,6 +193,9 @@ p {
     padding: 150px 0 100px 0;
 }
 
+#work h1 {
+    padding-bottom: 40px;
+}
 .work__categories {
     display: flex;
     justify-content: center;
@@ -201,14 +204,16 @@ p {
 
 .category__btn {
     font-size: var(--font-regular);
-    background-color: rgb(1, 70, 1);
+    background-color: rgba(149, 21, 235, 0.425);
     border: 1px solid black;;
     border-radius: 6px;
     margin: 0px 3px;
+    width: 100px;
+    transition: all 200ms ease;
 }
 
 .category__btn:hover {
-    background-color: rgb(1, 133, 1);
+    background-color: rgba(149, 21, 235, 0.644);
     border-radius: 6px;
 }
 .category__count {
