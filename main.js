@@ -36,9 +36,15 @@ document.addEventListener('scroll', () => {
     }
 })
 
-// Work category filtering
+// Core section background fade in effect
 const core = document.querySelector('#core');
 const work = document.querySelector('#work');
+
+// Core item description effect
+const coreItemDescLeft = document.querySelector('.core__item__description--left');
+const coreItemDescRight = document.querySelector('.core__item__description--right');
+
+// Work category filtering
 const workCaregories = document.querySelector('.work__categories');
 const workItem = document.querySelectorAll('.work__item');
 const workItemContainer = document.querySelector('.work__item__container');
@@ -51,18 +57,29 @@ workCaregories.addEventListener('click', (e) => {
             if(filter == '*' || filter == item.dataset.type) {
                 item.classList.remove('invisible');
             } else {
-                core.classList.add('core__background');
                 item.classList.add('invisible');
+                core.classList.add('core__background');    // Core section background fade in effect
+                coreItemDescLeft.classList.add('activeLeft');    // Core item description effect
+                setTimeout(()=> {   // 300ms delay
+                    coreItemDescRight.classList.add('activeRight');
+                }, 300);
             }
         })
         workItemContainer.classList.remove('anim--out');
     }, 300);
 })
 
+
 // Core section background fade in effect
+// Core item description effect
 document.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
     if(scrollY > 1300){
         core.classList.add('core__background');
+        coreItemDescLeft.classList.add('activeLeft');
+        setTimeout(()=> { // 300ms delay
+            coreItemDescRight.classList.add('activeRight');
+        }, 300);
     }
 })
+

@@ -313,6 +313,13 @@ p {
     margin-bottom: 30px;
     padding: 6px 30px;
     text-align: left;
+    transform: translateX(200px);
+    transition: all 200ms ease;
+    opacity: 0;
+}
+.core__item__description--left.activeLeft {
+    transform: translateX(0px);
+    opacity: 1;
 }
 
 .core__item__description--right {
@@ -320,6 +327,13 @@ p {
     font-size: 20px;
     padding: 6px 30px;
     text-align: left;
+    transform: translateX(-200px);
+    transition: all 200ms ease;
+    opacity: 0;
+}
+.core__item__description--right.activeRight {
+    transform: translateX(0px);
+    opacity: 1;
 }
 
 .core__item__description--right p {
