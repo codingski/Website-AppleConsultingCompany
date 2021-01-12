@@ -23,10 +23,10 @@ body {
     --font-small: 16px;
     --font-micro: 14px;
 
-        /* Font weight */
-        --weight-bold: 700;
-        --weight-semi-bold: 600;
-        --weight-regular: 400;
+    /* Font weight */
+    --weight-bold: 700;
+    --weight-semi-bold: 600;
+    --weight-regular: 400;
 }
 
 body {
@@ -106,7 +106,7 @@ p {
 }
 
 .navbar__logo:hover {
-    background-color: rgba(206, 6, 247, 0.63);
+    background-color: rgba(149, 47, 180, 0.692);
 }
 
 .navbar__logo__title {
@@ -123,11 +123,32 @@ p {
 
 .navbar__menu__item:hover {
     cursor: pointer;
-    background-color: rgba(206, 6, 247, 0.63);
+    background-color: rgba(112, 34, 136, 0.61);
     border-radius: 5px;
 
 }
 
+/* Arrow up Button */
+.arrow-up {
+    position: fixed;
+    font-size: 50px;
+    right: 50px;
+    bottom: 50px;
+    color: rgba(51, 255, 0, 0.705);
+    border-radius: 50%;
+    opacity: 1;
+    transition: all 300ms ease;
+}
+
+.arrow-up p {
+    margin: 0;
+    font-size: 15px;
+}
+
+.arrow-up.arrow--active {
+    opacity: 0;
+    pointer-events: none;
+}
 
 /* Home */
 #home {
@@ -202,18 +223,28 @@ p {
     margin-top: 5px;
 }
 
+.work__item .item__name {
+    font-size: 22px;
+    font-weight: 600;
+    color: rgba(216, 115, 0, 0.973);
+}
+
+.work__item .item__description {
+}
+
 .category__btn {
     font-size: var(--font-regular);
-    background-color: rgba(149, 21, 235, 0.425);
+    background-color: rgba(73, 73, 90, 0.993);
     border: 1px solid black;;
     border-radius: 6px;
-    margin: 0px 3px;
+    margin: 0px 10px;
+    padding: 5px;
     width: 100px;
     transition: all 200ms ease;
 }
 
 .category__btn:hover {
-    background-color: rgba(149, 21, 235, 0.644);
+    background-color:rgba(59, 43, 85, 0.993);
     border-radius: 6px;
 }
 .category__count {
@@ -301,7 +332,7 @@ p {
     line-height: 30px;
     width: 30px;
     height: 30px;
-    background-color: red;
+    background-color: rgba(196, 8, 8, 0.445);
     border-radius: 50%;
     margin-top: 5px;
 }

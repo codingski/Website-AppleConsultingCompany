@@ -36,14 +36,6 @@ document.addEventListener('scroll', () => {
     }
 })
 
-// Core section background fade in effect
-const core = document.querySelector('#core');
-const work = document.querySelector('#work');
-
-// Core item description effect
-const coreItemDescLeft = document.querySelector('.core__item__description--left');
-const coreItemDescRight = document.querySelector('.core__item__description--right');
-
 // Work category filtering
 const workCaregories = document.querySelector('.work__categories');
 const workItem = document.querySelectorAll('.work__item');
@@ -58,11 +50,6 @@ workCaregories.addEventListener('click', (e) => {
                 item.classList.remove('invisible');
             } else {
                 item.classList.add('invisible');
-                core.classList.add('core__background');    // Core section background fade in effect
-                coreItemDescLeft.classList.add('activeLeft');    // Core item description effect
-                setTimeout(()=> {   // 300ms delay
-                    coreItemDescRight.classList.add('activeRight');
-                }, 300);
             }
         })
         workItemContainer.classList.remove('anim--out');
@@ -70,11 +57,17 @@ workCaregories.addEventListener('click', (e) => {
 })
 
 
-// Core section background fade in effect
-// Core item description effect
+// Core Background fade in effect
+const core = document.querySelector('#core');
+const work = document.querySelector('#work');
+
+// Core Item Description effect
+const coreItemDescLeft = document.querySelector('.core__item__description--left');
+const coreItemDescRight = document.querySelector('.core__item__description--right');
+const targetDiv = document.querySelector('.core__item__title--left');
+
 document.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-    if(scrollY > 1300){
+    if (window.scrollY + window.innerHeight > targetDiv.offsetTop) {
         core.classList.add('core__background');
         coreItemDescLeft.classList.add('activeLeft');
         setTimeout(()=> { // 300ms delay
@@ -83,3 +76,17 @@ document.addEventListener('scroll', () => {
     }
 })
 
+
+// Make Arrow-Up Button
+const arrow = document.querySelector('.arrow-up');
+arrow.addEventListener('click', () => {
+    const home = document.querySelector('#home');
+    home.scrollIntoView({behavior: "smooth", block: "start"});
+})
+document.addEventListener('scroll', () => {
+    if(window.scrollY > 200) {
+        arrow.classList.remove('arrow--active');
+    } else {
+        arrow.classList.add('arrow--active');
+    }
+})
