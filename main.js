@@ -11,6 +11,16 @@ document.addEventListener('scroll', () => {
 })
 
 
+// Fade event
+const homeContainer = document.querySelector('.home__container');
+document.addEventListener('scroll', () => {
+    const homeHeight = homeContainer.getBoundingClientRect().height;
+    console.log(homeHeight);
+    if(window.scrollY < homeHeight) {
+        homeContainer.style.opacity = 1.2 - (window.scrollY / homeHeight);
+    }
+})
+
 // Work category filtering
 const workCaregories = document.querySelector('.work__categories');
 const workItem = document.querySelectorAll('.work__item');
