@@ -37,6 +37,8 @@ document.addEventListener('scroll', () => {
 })
 
 // Work category filtering
+const core = document.querySelector('#core');
+const work = document.querySelector('#work');
 const workCaregories = document.querySelector('.work__categories');
 const workItem = document.querySelectorAll('.work__item');
 const workItemContainer = document.querySelector('.work__item__container');
@@ -49,9 +51,18 @@ workCaregories.addEventListener('click', (e) => {
             if(filter == '*' || filter == item.dataset.type) {
                 item.classList.remove('invisible');
             } else {
+                core.classList.add('core__background');
                 item.classList.add('invisible');
             }
         })
         workItemContainer.classList.remove('anim--out');
     }, 300);
+})
+
+// Core section background fade in effect
+document.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    if(scrollY > 1300){
+        core.classList.add('core__background');
+    }
 })
