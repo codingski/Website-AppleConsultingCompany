@@ -90,3 +90,8 @@ document.addEventListener('scroll', () => {
         arrow.classList.add('arrow--active');
     }
 })
+
+
+arrow.addEventListener('onfocusin', () => {
+    arrow.style.color = 'red';
+})

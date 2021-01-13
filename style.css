@@ -135,7 +135,6 @@ p {
     right: 50px;
     bottom: 50px;
     color: rgba(51, 255, 0, 0.705);
-    border-radius: 50%;
     opacity: 1;
     transition: all 300ms ease;
 }
@@ -148,6 +147,18 @@ p {
 .arrow-up.arrow--active {
     opacity: 0;
     pointer-events: none;
+}
+
+/* Arrow up Button Animation */
+.arrow-up:hover {
+    animation: up 1s infinite;
+}
+
+@keyframes up { /* -webkit- 은 크롬브라우저에 적용하기 위해 적음 */
+    from {padding-bottom: 0px;}
+    from {opacity: 0.5;}
+    to {padding-bottom: 10px;}
+    to {opacity: 1;}
 }
 
 /* Home */
