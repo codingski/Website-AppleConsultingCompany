@@ -1,6 +1,5 @@
 // Navbar scroll effect
 const navbar = document.querySelector('#navbar');
-
 document.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
     if(scrollY > 75) {
@@ -9,6 +8,7 @@ document.addEventListener('scroll', () => {
         navbar.classList.remove('light-color');
     }
 })
+
 
 // Handle scrolling when tapping on the navbar menu
 navbar.addEventListener('click', (e) => {
@@ -21,11 +21,13 @@ navbar.addEventListener('click', (e) => {
     }
 })
 
+
 // Handle scrolling when tapping on the navbar logo
 const navbarLogo = document.querySelector('.navbar__logo');
 navbarLogo.addEventListener('click', () => {
     home.scrollIntoView({behavior: "smooth", block: "start"});
 })
+
 
 // Make home slowly fade to transparent as the window scrolls down
 const homeContainer = document.querySelector('.home__container');
@@ -35,6 +37,7 @@ document.addEventListener('scroll', () => {
         homeContainer.style.opacity = 1.2 - (window.scrollY / homeHeight);
     }
 })
+
 
 // Work category filtering
 const workCaregories = document.querySelector('.work__categories');
@@ -57,15 +60,12 @@ workCaregories.addEventListener('click', (e) => {
 })
 
 
-// Core Background fade in effect
+// Core Background fade in effect & Core Item Description effect
 const core = document.querySelector('#core');
 const work = document.querySelector('#work');
-
-// Core Item Description effect
 const coreItemDescLeft = document.querySelector('.core__item__description--left');
 const coreItemDescRight = document.querySelector('.core__item__description--right');
 const targetDiv = document.querySelector('.core__item__title--left');
-
 document.addEventListener('scroll', () => {
     if (window.scrollY + window.innerHeight > targetDiv.offsetTop) {
         core.classList.add('core__background');
@@ -89,9 +89,4 @@ document.addEventListener('scroll', () => {
     } else {
         arrow.classList.add('arrow--active');
     }
-})
-
-
-arrow.addEventListener('onfocusin', () => {
-    arrow.style.color = 'red';
 })
