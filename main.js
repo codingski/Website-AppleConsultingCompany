@@ -65,7 +65,7 @@ const core = document.querySelector('#core');
 const work = document.querySelector('#work');
 const coreItemDescLeft = document.querySelector('.core__item__description--left');
 const coreItemDescRight = document.querySelector('.core__item__description--right');
-const targetDiv = document.querySelector('.core__item__title--left');
+const targetDiv = document.querySelector('.core__item__title--right');
 document.addEventListener('scroll', () => {
     if (window.scrollY + window.innerHeight > targetDiv.offsetTop) {
         core.classList.add('core__background');

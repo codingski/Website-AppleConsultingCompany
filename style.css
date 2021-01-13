@@ -332,11 +332,11 @@ p {
     width: 50px;
     height: 2px;
     background-color: var(--color-dark-white);
+    margin: 15px 0;
     display: block;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    margin-top: 8px;
 }
 
 .work__item__container.anim--out {
@@ -384,7 +384,7 @@ p {
     line-height: 30px;
     width: 30px;
     height: 30px;
-    background-color: rgba(196, 8, 8, 0.445);
+    background-color: rgba(209, 23, 23, 0.705);
     border-radius: 50%;
     margin-top: 5px;
 }
@@ -458,7 +458,7 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 3px solid rgba(133, 13, 13, 0.938);
+    background-color: rgba(50, 109, 117, 0.637);
     border-radius: 10px;
     width: 500px;
     height: 88px;
@@ -470,6 +470,7 @@ p {
     font-weight: 600;
     font-size: 25px;
     margin: 0;
+    padding-bottom: 8px;
 }
 
 .procedure__description {
