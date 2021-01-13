@@ -65,8 +65,8 @@ const core = document.querySelector('#core');
 const work = document.querySelector('#work');
 const coreItemDescLeft = document.querySelector('.core__item__description--left');
 const coreItemDescRight = document.querySelector('.core__item__description--right');
-const targetDiv = document.querySelector('.core__item__title--right');
 document.addEventListener('scroll', () => {
+    const targetDiv = document.querySelector('.core__item__title--right');
     if (window.scrollY + window.innerHeight > targetDiv.offsetTop) {
         core.classList.add('core__background');
         coreItemDescLeft.classList.add('activeLeft');
@@ -88,5 +88,37 @@ document.addEventListener('scroll', () => {
         arrow.classList.remove('arrow--active');
     } else {
         arrow.classList.add('arrow--active');
+    }
+})
+
+
+// Procedures effect
+const procedures = document.querySelector('.procedures');
+const procedureOne = document.querySelector('.procedure.one');
+const procedureTwo = document.querySelector('.procedure.two');
+const procedureThree = document.querySelector('.procedure.three');
+const procedureFour = document.querySelector('.procedure.four');
+const procedureFive = document.querySelector('.procedure.five');
+const procedureSix = document.querySelector('.procedure.six');
+const pp = document.querySelector('.procedure');
+document.addEventListener('scroll', () => {
+    const targetDiv = document.querySelector('.procedure.two');
+    if(window.scrollY + window.innerHeight > targetDiv.offsetTop){
+        procedureOne.classList.add('procedure--active');
+        setTimeout(() => {
+            procedureTwo.classList.add('procedure--active');
+        }, 250);
+        setTimeout(() => {
+            procedureThree.classList.add('procedure--active');
+        }, 500);
+        setTimeout(() => {
+            procedureFour.classList.add('procedure--active');
+        }, 750);
+        setTimeout(() => {
+            procedureFive.classList.add('procedure--active');
+        }, 1000);
+        setTimeout(() => {
+            procedureSix.classList.add('procedure--active');
+        }, 1250);
     }
 })
