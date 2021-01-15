@@ -122,3 +122,10 @@ document.addEventListener('scroll', () => {
         }, 1250);
     }
 })
+
+
+const toggleBtn = document.querySelector('.toggleBtn');
+const navbarMenu = document.querySelector('.navbar__menu');
+toggleBtn.addEventListener('click', () => {
+    navbarMenu.classList.add('toggleBtn--active');
+})

@@ -108,6 +108,11 @@ p {
 .navbar__logo:hover {
     background-color: rgba(149, 47, 180, 0.692);
 }
+.navbar--active {
+    background-color: rgba(149, 47, 180, 0.692);
+    border: 1px solid white;
+}
+
 
 .navbar__logo__title {
     color: var(--color-light-white);
@@ -126,6 +131,15 @@ p {
     background-color: rgba(112, 34, 136, 0.61);
     border-radius: 5px;
 
+}
+
+.toggleBtn {
+    position: absolute;
+    color: red;
+    font-size: 25px;
+    right: 10px;
+    top: 23px;
+    display: none;
 }
 
 /* Arrow up Button */
@@ -155,10 +169,8 @@ p {
 }
 
 @keyframes up { /* -webkit- 은 크롬브라우저에 적용하기 위해 적음 */
-    from {padding-bottom: 0px;}
-    from {opacity: 0.5;}
-    to {padding-bottom: 10px;}
-    to {opacity: 1;}
+    from {padding-bottom: 0px; opacity: 0.5;}
+    to {padding-bottom: 10px; opacity: 1;}
 }
 
 /* Home */
@@ -530,4 +542,35 @@ p {
 
 .icons img.youtube {
     width: 70px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .toggleBtn {
+        position: absolute;
+        color: red;
+        font-size: 25px;
+        right: 15px;
+        top: 15px;
+        display: block;
+    }
+
+    #navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: grey;
+    }
+
+    .navbar__menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        margin: 0;
+        visibility: hidden;
+    }
+
+    .toggleBtn--active {
+        visibility: visible;
+    }
 }
